@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="darkSkies">
+<head>
+  <meta charset="utf-8">
+  <title>Dark Skies</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="DarkSkiesIndexCtrl as darkSkiesIndex">
+  <h1>Dark Skies</h1>
+  <h4>Currently: {{ darkSkiesIndex.weather.currently.summary }}, {{ darkSkiesIndex.weather.currently.temperature }} &deg;F</h4>
+  <h5>Hourly: {{ darkSkiesIndex.weather.hourly.summary }} <br> Chance of rain {{ darkSkiesIndex.weather.hourly.data[1].precipProbability}}% </h5>
+  <h6>{{ darkSkiesIndex.weather.minutely.summary }} {{ darkSkiesIndex.weather.minutely.temperature }} &deg;F</h6>
+
+
+</body>
+</html>

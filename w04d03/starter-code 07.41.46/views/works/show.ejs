@@ -1,0 +1,13 @@
+<h1 class="title is-1">Show</h1>
+
+<h2 class="title is-2"><%= work.composition %></h2>
+<h3 class="subtitle is-3"><%= work.composer.firstname %> <%= work.composer.lastname %></h3>
+<p>Composition type : <%= work.style %></p>
+<p>Date: <%= work.datecreated %></p>
+
+<a href="/works/<%= work.id %>/edit" class="button is-info">Edit</a>
+
+<form action="/works/<%= work.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE"/>
+  <button class="button is-danger">Delete</button>
+</form>

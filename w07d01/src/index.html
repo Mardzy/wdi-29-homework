@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="beerApp">
+<head>
+  <meta charset="utf-8">
+  <title>BrewDog API</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="BeersIndexCtrl as beersIndex">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand" href="#">Brew Dogg Beer</span>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="form-group navbar-form navbar-right">
+          <input type="text" class="form-control" ng-model="beersIndex.q" placeholder="Search...">
+        </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6" ng-repeat="beer in beersIndex.filtered">
+        <div class="thumbnail">
+          <img class="img" ng-src="{{beer.image_url}}" alt="{{ beer.name }}">
+          <div class="caption">
+            <h4>{{beer.name}}</h4>
+            <h6>{{beer.tagline}}</h6>
+            <p>{{beer.description}}</p>
+            <p>First brewed: {{beer.first_brewed}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button ng-click="beersIndex.addMore()" class="btn btn-primary">Load Mode</button>
+  </body>
+  </html>

@@ -1,0 +1,51 @@
+<h2>Edit Photo</h2>
+<section class="container form">
+  <form class="text-uppercase" ng-submit="photosEdit.update()" name="photosEdit.editForm">
+    <div >
+      <p >
+        <label  for="country">Country</label>
+      </p>
+      <span>
+        <select name="country" id="country" ng-model="photosEdit.photo.country" required>
+          <option ng-repeat="country in photosEdit.countries" value="{{ country.id }}">{{ country.name }}</option>
+        </select>
+      </span>
+      <div ng-messages="PhotosEdit.editForm.country.$error" ng-if="PhotosEdit.editForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please select a country in this field.</div>
+      </div>
+    </div>
+    <div >
+      <p >
+        <label  for="location">Location</label>
+      </p>
+      <input type="text" class="input" id="location" name="location" ng-model="photosEdit.photo.location" required>
+      <div ng-messages="PhotosEdit.editForm.location.$error" ng-if="PhotosEdit.editForm.location.$touched || PhotosEdit.editForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please enter a location in this field.</div>
+      </div>
+    </div>
+
+    <div >
+      <p >
+        <label  for="description">Description</label>
+      </p>
+      <input type="text" class="input" id="description" name="description" ng-model="photosEdit.photo.description" required>
+    </div>
+    <div >
+      <p >
+        <label class="label" for="image">Image Url</label>
+      </p>
+      <input type="text" class="input" id="image" name="image" ng-model="photosEdit.photo.image" required>
+      <div ng-messages="PhotosEdit.editForm.description.$error" ng-if="PhotosEdit.editForm.description.$touched || PhotosEdit.editForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please enter a description in this field.</div>
+      </div>
+    </div>
+    <div >
+      <p >
+        <input class="submit" type="submit" value="Update">
+      </p>
+      <div ng-messages="PhotosEdit.editForm.image.$error" ng-if="PhotosEdit.editForm.image.$touched || PhotosEdit.editForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please enter an image URL for this field.</div>
+      </div>
+    </div>
+  </form>
+</section>

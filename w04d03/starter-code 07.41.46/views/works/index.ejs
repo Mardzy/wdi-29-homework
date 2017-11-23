@@ -1,0 +1,14 @@
+<h1 class="title is-1">Famous Works</h1>
+
+<ul class="columns is-multiline">
+  <% works.forEach((work) => { %>
+    <li class="column is-half">
+      <div class="box">
+        <a href="/works/<%= work.id %>"><h3 class="title is-3"><%= work.composition %></h3></a>
+        <h3 class="subtitle is-3"><%= work.composer.firstname %> <%= work.composer.lastname %></h3>
+        <p><%= work.style %></p>
+        <p>Date: <%= work.datecreated %></p>
+      </div>
+    </li>
+  <% }); %>
+</ul>

@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  height: 70px;
+  padding-top: 10px;
+}
+
+.container{
+  height:500px;
+}
+
+.row{
+  height:200px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*div.image.dice-sums{
+  background-image: url('/images/dice-sums.png');
+  z-index: 1;
+}
+
+div.coming-soon{
+  background-image: url('/images/coming-soon.jpg');
+  z-index: 1;
+
+}*/

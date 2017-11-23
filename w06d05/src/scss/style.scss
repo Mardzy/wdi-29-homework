@@ -1,0 +1,36 @@
+@import "variables";
+@import "forms";
+*{
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  color: $font-color;
+  text-shadow: $text-shadow;
+
+}
+a, h1{
+  color: #D89D6A;
+}
+nav.navbar{
+  background: none;
+
+}
+nav.navbar a:hover, nav.navbar a:active{
+  color: darken($font-color, 5%);
+}
+img{
+  width: 100%;
+  box-shadow: $box-shadow;
+  border-radius: 4px;
+}
+body{
+background-image: linear-gradient(to top,rgb(152, 117, 95)0%, rgb(254, 222, 171) 25%, rgba(236, 197, 139, 0.7) 35%, rgba(225, 175, 100, 0.7) 60%, rgba(144, 187, 216, 0.8) 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+height: 100vh;
+}
+button.submit{
+  background-color: rgb(176, 201, 210);
+}
+@import "hamburger-bar";

@@ -1,0 +1,13 @@
+<div class="card" >
+  <a ui-sref="birdsShow({ id: bird.id })">
+    <img class="card-img-top" ng-src="{{ bird.image}}" alt="{{ bird.name }}"></a>
+    <div class="card-block">
+      <h4 class="card-title">{{ bird.name }}</h4>
+      <h5 class="card-title">{{ bird.family }}</h5>
+      <h6 class="card-title">{{ bird.latinName }}</h6>
+    </div>
+    <div class="row">
+      <button class="btn btn-warning" ui-sref="birdsEdit({ id: bird.id })">Edit</button>
+      <button class="btn btn-danger" ng-click="birdsDelete(bird)">Delete</button>
+    </div>
+  </div>

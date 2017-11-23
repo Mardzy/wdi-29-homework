@@ -1,0 +1,12 @@
+<div class="container-fluid details">
+  <a ui-sref="photosShow({ id: photo.id })">
+    <img ng-src="{{ photo.image }}">
+  </a>
+  <div class="row">
+    <h4 class="title">{{ photo.country.name }}</h4><br>
+  </div>
+  <div class="row">
+    <p>{{ photo.location }}</p>
+  </div>
+
+</div>

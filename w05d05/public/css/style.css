@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+body{
+  background-color: steelBlue;
+}
+header{
+  background-color: purple;
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-fluid{
+  height: 88vh;
+}
+.map{
+  background-color: tomato;
+  height: 88vh;
+  padding: 0;
+  position: relative;
+}
+.heading{
+  background-color: yellow;
+  height: 10vh;
+  width: 35vw;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 2;
+  left: 6px;
+  top: 6px;
+  color: white;
+
+}
+h1  {
+  align-self: center;
+  text-align: center;
+
+  color: yellow;
+  font-size: 4.8vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.form-name {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.btn-danger{
+  height: 35px;
+  margin-bottom: 4px;
+}
+
+.info {
+  background-color: olive;
+  height: 88vh;
+  padding: 0;
+  overflow: scroll;
+  display:flex;
+  flex-direction: column;
+}
+.market{
+  background-color: white;
+  flex-shrink: 0;
+  border-radius: 6px;
+  margin: 4px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.6);
+  padding: 0 10px 0;
+}
+
+.new-market{
+  width: 98%;
+  background-color: gray;
+  border-radius: 6px;
+  margin: 4px;
+}
+
+.form-group{
+  height:40px;
+}
+.img{
+  width:100%;
+}
+.new-market label{
+  height: 25px;
+  font-size: 14px;
+  margin: 0;
+}
+.new-market input{
+  padding: 4px;
+}
+
+span, label{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.hidden{
+  display: none;
+}

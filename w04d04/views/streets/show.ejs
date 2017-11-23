@@ -1,0 +1,11 @@
+<h1 class="title is-1">Show</h1>
+
+<h3 class="subtitle is-3"><%= streetArt.streetArtist.name %></h3>
+<div><%= streetArt.description %></div>
+
+<a href="/streetart/<%= streetArt.id %>/edit" class="button is-info">Edit</a>
+
+<form action="/streetart/<%= streetArt.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE"/>
+  <button class="button is-danger">Delete</button>
+</form>

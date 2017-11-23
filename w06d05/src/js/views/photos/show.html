@@ -1,0 +1,13 @@
+<section class="container">
+  <photo-details photo="photosShow.photo"></photo-details>
+
+  <div class="row">
+    <p class="col-6">{{ photosShow.photo.description }}</p>
+    <div class="col-6">
+      <button class="btn-sm submit" ui-sref="photosEdit({ id: photosShow.photo.id })">Edit</button>
+      <button class="btn-sm btn-danger" ng-click="photosShow.delete()">Delete</button>
+    </div>
+
+  </div>
+
+</section>

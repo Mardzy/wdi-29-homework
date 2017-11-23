@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="photoApp">
+<head>
+  <title>Photo App</title>
+  <base href="/">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="MainCtrl as main">
+  <nav-bar></nav-bar>
+
+  <h1 class="text-center">Southern Africa</h1>
+  <div class="container" ng-if="main.message">
+    {{ main.message }}
+  </div>
+  <main class="container-fluid" ui-view></main>
+
+</body>
+</html>

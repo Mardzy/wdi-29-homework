@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  continent: one
+  name: MyText
+  size: MyText
+  population: MyText
+  language: MyText
+
+two:
+  continent: two
+  name: MyText
+  size: MyText
+  population: MyText
+  language: MyText

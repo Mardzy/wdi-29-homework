@@ -1,0 +1,54 @@
+<h2>Add Photo</h2>
+<section class="container form">
+  <form class="text-uppercase"  ng-submit="photosNew.create()" name="photosNew.newForm" novalidate>
+    <div>
+      <p>
+        <label for="image">Country</label>
+      </p>
+      <span>
+        <select name="country" id="country" ng-model="photosNew.photo.country">
+          <option  ng-repeat="country in photosNew.countries" value="{{country.id}}" class="text-center" required>{{country.name}}</option>
+        </select>
+      </span>
+      <div ng-messages="photosNew.newForm.country.$error" ng-if="photosNew.newForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please select a country in this field.</div>
+      </div>
+    </div>
+    <div>
+      <p>
+        <label for="location">Location</label>
+      </p>
+      <input type="text" class="input" id="location" name="location" ng-model="photosNew.photo.location" required>
+      <div ng-messages="photosNew.newForm.location.$error" ng-if="photosNew.newForm.location.$touched || photosNew.newForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please enter a location in this field.</div>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        <label for="description">Desciption</label>
+      </p>
+      <input type="text" class="input" id="description" name="description" ng-model="photosNew.photo.description" required>
+      <div ng-messages="photosNew.newForm.description.$error" ng-if="photosNew.newForm.description.$touched || photosNew.newForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please enter a description in this field.</div>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        <label for="image">Image Url</label>
+      </p>
+      <input type="url" class="input" id="image" name="image" ng-model="photosNew.photo.image" required>
+      <div ng-messages="photosNew.newForm.image.$error" ng-if="photosNew.newForm.image.$touched || photosNew.newForm.$submitted" role="alert">
+        <div ng-message="required" class="warning">Please enter an image URL for this field.</div>
+        <div ng-message="url" class="warning">Please enter a valid URL.</div>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        <input ng-disabled="photosNew.newForm.$invalid" class="submit" type="submit" value="Add Photo">
+      </p>
+    </div>
+  </form>
+</section>

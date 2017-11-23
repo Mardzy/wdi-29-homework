@@ -1,0 +1,22 @@
+<div class="col-lg-4">
+  <h3>Add New Bird</h3>
+  <form id="new-bird" ng-submit="birdsNew.create()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Blue Jay" name="name" required ng-model="birdsNew.bird.name">
+    </div>
+    <div class="form-group">
+      <label for="latinName">Latin Name</label>
+      <input type="text" class="form-control" id="latinName" placeholder="Cyanocitta cristata" name="latinName" required ng-model="birdsNew.bird.latinName">
+    </div>
+    <div class="form-group">
+      <label for="familyName">Family Name</label>
+      <input type="text" class="form-control" id="family" placeholder="Corvidae" name="family" required ng-model="birdsNew.bird.family">
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="url" class="form-control" id="image" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cyanocitta-cristata-004.jpg/220px-Cyanocitta-cristata-004.jpg" name="Image" required ng-model="birdsNew.bird.image">
+    </div>
+    <input type="submit" name="submit" value="submit">
+  </form>
+</div>

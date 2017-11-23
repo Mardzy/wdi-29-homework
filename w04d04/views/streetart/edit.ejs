@@ -1,0 +1,27 @@
+<form method="POST" action="/streetart/<%= streetArtist.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div>
+    <label>Name</label>
+    <input type="text" name="name" value="<%= streetArtist.name %>">
+  </div>
+  <div>
+    <label>Nationality</label>
+    <input type="text" name="nationality" value="<%= streetArtist.nationality %>">
+  </div>
+  <button>Update</button>
+</form>
+
+<h1>Photos</h1>
+<h1 class="title is-1">New</h1>
+
+    <form method="POST" action="/streetart">
+  <div>
+    <label>Name</label>
+    <input type="text" name="name">
+  </div>
+  <div>
+    <label>nationality</label>
+    <input type="text" name="nationality">
+  </div>
+  <button>Create</button>
+</form>

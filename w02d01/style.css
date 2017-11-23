@@ -1,0 +1,62 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+body{
+  background-image:  url('images/daft-punk.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+  background-image: url('daft-punk-logo.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0;
+  height:250px;
+}
+
+.container {
+  padding-top: 50px;
+  width : 50%;
+  margin: -20px auto 0;
+}
+
+.img {
+  /*max-width: 100%;*/
+  padding: 5px;
+  border: none;
+  float: left;
+  
+  border-radius: 50%;
+}
+div div {
+  width : 120px;
+  float:left;
+  display: inline;
+  border: none;
+  background: transparent;
+  position: relative;
+  height:140px;
+}
+p {
+  position: absolute;
+  color: yellow;
+  font-weight: bold;
+  right: -10px;
+  bottom: 15px;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+}
+
+.off {
+    background-image: url('images/Off.gif');
+    background-size:cover;
+}
+
+.on {
+    background-image: url('images/smile.gif');
+    background-size:cover;
+}

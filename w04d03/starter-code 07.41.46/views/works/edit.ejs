@@ -1,0 +1,38 @@
+<h1 class="title is-1">Edit</h1>
+
+<div class="columns">
+  <form class="column is-half" method="POST" action="/works/<%= work.id %>">
+    <input type="hidden" name="_method" value="PUT">
+
+    <div class="field">
+      <label for="title">Composition</label>
+      <div class="control">
+        <input class="input" type="text" name="title" id="title" value="<%= work.composition %>">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="title">Author</label>
+      <div class="control">
+        <div class="select">
+          <select name="composer">
+            <% composers.forEach((composer) => { %>
+              <option value="<%= composer.id %>" <% if(composer.id === work.composer.id) { %>selected<% } %>>
+              <%= composer.firstname %> <%= composer.lastname %>
+              </option>
+              <% }) %>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="title">Description</label>
+        <div class="control">
+          <textarea class="textarea" name="description"><%= work.description %></textarea>
+        </div>
+      </div>
+
+      <button class="button is-primary is-fullwidth">Update</button>
+    </form>
+  </div>

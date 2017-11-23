@@ -1,0 +1,22 @@
+<div class="col-lg-4">
+  <h3>Add New Bird</h3>
+  <form id="new-bird" ng-submit="birdsEdit.update()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required ng-model="birdsEdit.bird.name" value="birdsEdit.bird.name">
+    </div>
+    <div class="form-group">
+      <label for="latinName">Latin Name</label>
+      <input type="text" class="form-control" id="latinName" name="latinName" required ng-model="birdsEdit.bird.latinName" value="birdsEdit.bird.latinName">
+    </div>
+    <div class="form-group">
+      <label for="familyName">Family Name</label>
+      <input type="text" class="form-control" id="family" name="family" required ng-model="birdsEdit.bird.family" value="birdsEdit.bird.family">
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="url" class="form-control" id="image" name="Image" required ng-model="birdsEdit.bird.image" value="birdsEdit.bird.image">
+    </div>
+    <input type="submit" name="submit" value="submit">
+  </form>
+</div>

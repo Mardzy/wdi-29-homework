@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1>TEAMS</h1>
+</div>
+
+
+<div class="container">
+  <div class="row">
+
+      <% teams.forEach(team=>{%>
+        <div class="lg-col-6">
+        <h2><%= team.location %> <%= team.name %></h2>
+        <p><%= team.arena %></p>
+        <p><%= team.sport %></p>
+        </div>
+      <%})%>
+
+  </div>
+</div>

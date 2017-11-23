@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="PropertyApp">
+<head>
+  <meta charset="utf-8">
+  <title>Property App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="PropertyCtrl as properties">
+  <header>
+    <h1>{{}}  Properties</h1>
+  </header>
+  <div class="container-fluid">
+    <div class="row" >
+      <div class="col-8">
+        <div class="row">
+
+          <div class="col-lg-6" ng-repeat=" property in properties.all">
+            <h5>
+              {{ property.address}}
+            </h5>
+            <img ng-src="{{property.image}}" alt="Property Image">
+            <p>Bedrooms: {{ property.bedrooms}}<br>
+              Bathrooms: {{ property.bathrooms}}<br>
+              Asking Price: £{{ property.askingPrice}}
+            </p>
+            <button class="btn btn-danger" ng-click="properties.propertiesDelete(property)">Delete</button>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- address: 'St Paul Street, Islington N1',
+      bedrooms: 3,
+      bathrooms: 2,
+      image: 'images/prop1.jpg',
+      askingPrice: 1599995 -->
+      <div class="col-lg-4">
+        <h3>Add New Property</h3>
+        <form id="new-property" ng-submit="properties.propertiesCreate()">
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="St Paul Street, Islington N1" required ng-model="properties.newProperty.address">
+          </div>
+          <div class="form-group">
+            <label for="bedrooms">Bedrooms</label>
+            <input type="number" class="form-control" id="bedrooms" placeholder="5" required ng-model="properties.newProperty.bedrooms">
+          </div>
+          <div class="form-group">
+            <label for="bathrooms">Bathrooms</label>
+            <input type="number" class="form-control" id="bathrooms" placeholder="4" required ng-model="properties.newProperty.bathrooms">
+          </div>
+          <div class="form-group">
+            <label for="image">Image</label>
+            <input type="url" class="form-control" id="image" placeholder="http://draisci.com/wp-content/uploads/East-London-Apartment05.jpg" required ng-model="properties.newProperty.image">
+          </div>
+          <div class="form-group">
+            <label for="askingPrice">Asking Price</label>
+            <input type="number" class="form-control" id="askingPrice" placeholder="150000" required ng-model="properties.newProperty.askingPrice">
+          </div>
+          <input type="submit" name="submit" value="submit">
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

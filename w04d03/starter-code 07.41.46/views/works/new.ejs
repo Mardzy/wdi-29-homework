@@ -1,0 +1,35 @@
+<h1 class="title is-1">New</h1>
+
+<div class="columns">
+  <form class="column is-half" method="POST" action="/works">
+
+    <div class="field">
+      <label for="title">Composition</label>
+      <div class="control">
+        <input class="input" type="text" name="composition" id="title">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="title">Composer</label>
+      <div class="control">
+        <div class="select">
+          <select name="composer">
+            <% composers.forEach((composer) => { %>
+              <option value="<%= composer.id %>"><%= composer.firstname %> <%= composer.lastname %></option>
+            <% }) %>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="title">Style</label>
+      <div class="control">
+        <input class="input" type="text" name="style" id="title">
+      </div>
+    </div>
+
+    <button class="button is-primary is-fullwidth">Create</button>
+  </form>
+</div>

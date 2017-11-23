@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <h1>Players</h1>
+</div>
+<div class="container">
+  <div class="row">
+
+      <% players.forEach(player => {%>
+        <div class="lg-col-4">
+        <h2><%= player.name %></h2>
+        <h3><%= player.team.location %> <%= player.team.name %></h3>
+        <p><%= player.position %></p>
+        <p><%= player.countryofbirth%></p>
+        <p><%= player.age %></p>
+        <% player.images.forEach((image) => { %>
+          <img src="<%= image.url %>" style="width: 100px" alt="<%= image.caption %>">
+        <% }) %>
+        </div>
+        
+      <% }) %>
+  </div>
+</div>
